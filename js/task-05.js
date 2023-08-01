@@ -1,12 +1,11 @@
-const elements = {
-  inputValue: document.querySelector("#name-input"),
-  valueSpan: document.querySelector("#name-output"),
-};
-elements.inputValue.placeholder = "Anonymous";
-// console.log(elements.inputValue.placeholder);
+const nameInput = document.getElementById("name-input");
+    const nameOutput = document.getElementById("name-output");
 
-elements.inputValue.addEventListener("input", handlerSearch);
+    // Додаємо обробник події input до інпуту
+    nameInput.addEventListener("input", () => {
+      // Отримуємо поточне значення інпуту
+      const name = nameInput.value.trim();
 
-function handlerSearch(evt) {
-  elements.valueSpan.textContent = evt.currentTarget.value.trim();
-}
+      // Встановлюємо текстовий вміст для спана з відповідним значенням
+      nameOutput.textContent = name === "" ? "Anonymous" : name;
+    });
