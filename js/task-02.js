@@ -20,6 +20,8 @@ const ingredients = [
       // Додаємо клас "item" до елементу <li>
       liElement.classList.add("item");
 
-      // Додаємо елемент <li> до списку <ul>
-      ulElement.appendChild(liElement);
+      
     });
+    
+    // Додаємо елемент <li> до списку <ul>
+      ulElement.appendChild(liElement);
