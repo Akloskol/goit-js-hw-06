@@ -7,21 +7,15 @@ const ingredients = [
   "Condiments",
 ];
 
- const ulElement = document.getElementById("ingredients");
+const list = document.querySelector("#ingredients");
 
-    // Проходимо по масиву ingredients і додаємо кожен елемент до списку
-    ingredients.forEach((ingredient) => {
-      // Створюємо елемент <li>
-      const liElement = document.createElement("li");
+const markup = ingredients.map((el) => {
+  const li = document.createElement("li");
+  li.classList.add("item");
+  li.textContent = el;
+  return li;
+});
+list.append(...markup);
 
-      // Встановлюємо текстовий вміст для <li> зі значенням інгредієнта
-      liElement.textContent = ingredient;
-
-      // Додаємо клас "item" до елементу <li>
-      liElement.classList.add("item");
-
-      
-    });
-
-    // Додаємо елемент <li> до списку <ul>
-      ulElement.append(liElement);
+console.log(markup);
+console.log(list);
