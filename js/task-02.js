@@ -22,6 +22,6 @@ const ingredients = [
 
       
     });
-    
+
     // Додаємо елемент <li> до списку <ul>
-      ulElement.appendChild(liElement);
+      ulElement.append(liElement);
